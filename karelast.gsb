@@ -1,0 +1,619 @@
+﻿MODULE GLOBAL A {Συνάρτηση Καρελ (Init_SOURCE$, Εμφάνιση, &Μήνυμα$, Κώδικας){
+	Αν Ελληνικά Τότε
+		SyntaxError$="Συντακτικό λάθος εδώ"
+		MissingNumber$="Λείπει αριθμός"
+		MissingName$="Λείπει αναγνωριστικό"
+		Linepos$="Γραμμή: {0}, Θέση: {1}"
+		Lookdef$="Δες στους ορισμούς. Έχεις αναγνωριστικά χωρίς ορισμούς::"
+		Expstat$="Περίμενα οδηγία εδώ "
+		Unendsource$=", δεν περίμενα τέλος προγράμματος"
+		Mtof$="Λείπει τύπος  "
+		Miss$="Λείπει "
+		At$=", δες εδώ "
+		Und$="Άγνωστο όνομα:"
+		ThisId$="Αυτό το αναγνωριστικόr "
+		ExErr$=" υπάρχει, λάθος εδώ "
+		Eat$=", λάθος εδώ "	
+	Αλλιώς
+		SyntaxError$="Syntax Error at"
+		MissingNumber$="Missing Number"
+		MissingName$="Missing Name"
+		Linepos$="Line: {0}, Pos: {1}"
+		Lookdef$="Look Definitions, You Have Undefined Names:"
+		Expstat$="Expected a statement at "
+		Unendsource$=", unexpected end of source"
+		Mtof$="Missing type of "
+		Miss$="Missing "
+		At$=" at "
+		Und$="Undefined Name:"
+		ThisId$="This Identifier "
+		ExErr$=" exist, error at "
+		Eat$=", error at "
+	Τέλος Αν
+	ΤωρινόςΟρισμός$=""
+	Δες οκ {
+		Ανάλυσε()
+	}
+	Μήνυμα$=Λάθος$
+	=Λάθος ή όχι Οκ
+	Ρουτίνα Ανάλυσε()
+		Αδειασε	
+		Σταθερή NoPrintLexar=Αληθές
+		Σταθερή BEGINNING_OF_PROGRAM$="BEGINNING-OF-PROGRAM"
+		Σταθερή END_OF_PROGRAM$="END-OF-PROGRAM"
+		Σταθερή BEGINNING_OF_EXECUTION$="BEGINNING-OF-EXECUTION"
+		Σταθερή END_OF_EXECUTION$="END-OF-EXECUTION"
+		Σταθερή BEGIN_BLOCK$="BEGIN"
+		Σταθερή END_BLOCK$="END"
+		Σταθερή DEFINE_NEW_INSTRUCTION$="DEFINE"
+		Σταθερή DEFINE_CONTINUE$="AS"
+		
+		Σταθερή ITERATE$="ITERATE"
+		Σταθερή ITERATE_CONTINUE$="TIMES"
+		
+		Σταθερή IF$="IF"
+		Σταθερή IF_THEN$="THEN"
+		Σταθερή IF_ELSE$="ELSE"
+		
+		Σταθερή LOOP_CHECK$="WHILE"
+		Σταθερή LOOP_CONTINUE$="DO"
+		
+		Απαρίθμηση Condition {
+			FRONT.IS.CLEAR=-10000, FRONT.IS.BLOCKED,  LEFT.IS.CLEAR
+			LEFT.IS.BLOCKED, RIGHT.IS.CLEAR, RIGHT.IS.BLOCKED
+			BACK.IS.CLEAR, BACK.IS.BLOCKED, NEXT.TO.A.BEEPER
+			NOT.NEXT.TO.A.BEEPER, ANY.BEEPERS.IN.BEEPER.BAG, NO.BEEPERS.IN.BEEPER.BAG
+			FACING.NORTH, NOT.FACING.NORTH, FACING.SOUTH, NOT.FACING.SOUTH
+			FACING.EAST, NOT.FACING.EAST, FACING.WEST, NOT.FACING.WEST
+		}
+		
+		Σταθερή Block_=-1000
+		
+		Απαρίθμηση ControlStatements {
+			Iterate_=-2000, If_, While_, Base_
+		}
+		
+		Απαρίθμηση Instruction {MOVE=-1510, TURNLEFT, PICKBEEPER, PUTBEEPER,TURNOFF}
+		
+		
+		Identifiers=Ουρά:="MOVE":=MOVE, "TURNLEFT":=TURNLEFT,"PICKBEEPER":=PICKBEEPER
+		Προσθήκη Identifiers, BEGINNING_OF_PROGRAM$:=-3000, END_OF_PROGRAM$:=-3000
+		Προσθήκη Identifiers, BEGINNING_OF_EXECUTION$:=-3000, END_OF_EXECUTION$:=-1000
+		Προσθήκη Identifiers, "PUTBEEPER":=PUTBEEPER,"TURNOFF":=TURNOFF
+		Προσθήκη Identifiers, BEGIN_BLOCK$:=Block_, END_BLOCK$:=-1000
+		Προσθήκη Identifiers, ITERATE$:=Iterate_, ITERATE_CONTINUE$:=-3
+		Προσθήκη Identifiers, IF$:=If_, IF_THEN$:=-3000, IF_ELSE$:=-3000, LOOP_CHECK$:=While_, LOOP_CONTINUE$:=-3000
+		Προσθήκη Identifiers,"FRONT-IS-CLEAR":=FRONT.IS.CLEAR, "FRONT-IS-BLOCKED":=FRONT.IS.BLOCKED
+		Προσθήκη Identifiers, "LEFT-IS-CLEAR":=LEFT.IS.CLEAR, "LEFT-IS-BLOCKED":=LEFT.IS.BLOCKED
+		Προσθήκη Identifiers,"RIGHT-IS-CLEAR":=RIGHT.IS.CLEAR, "RIGHT-IS-BLOCKED":=RIGHT.IS.BLOCKED
+		Προσθήκη Identifiers,"BACK-IS-CLEAR":=BACK.IS.CLEAR, "BACK-IS-BLOCKED":=BACK.IS.BLOCKED
+		Προσθήκη Identifiers,"NEXT-TO-A-BEEPER":=NEXT.TO.A.BEEPER, "NOT-NEXT-TO-A-BEEPER":=NOT.NEXT.TO.A.BEEPER
+		Προσθήκη Identifiers,"ANY-BEEPERS-IN-BEEPER-BAG":=ANY.BEEPERS.IN.BEEPER.BAG
+		Προσθήκη Identifiers,"NO-BEEPERS-IN-BEEPER-BAG":=NO.BEEPERS.IN.BEEPER.BAG, "FACING-NORTH":=FACING.NORTH
+		Προσθήκη Identifiers,"NOT-FACING-NORTH":=NOT.FACING.NORTH, "FACING-SOUTH":=FACING.SOUTH
+		Προσθήκη Identifiers,"NOT-FACING-SOUTH":=NOT.FACING.SOUTH, "FACING-EAST":=FACING.EAST
+		Προσθήκη Identifiers,"NOT-FACING-EAST":=NOT.FACING.EAST, "FACING-WEST":=FACING.WEST
+		Προσθήκη Identifiers,"NOT-FACING-WEST":=NOT.FACING.WEST
+		Προσθήκη Identifiers, DEFINE_NEW_INSTRUCTION$:=-3000, DEFINE_CONTINUE$:=-3000
+		
+		Starting_Identifiers=Μήκος(Identifiers)
+		
+		Απαρίθμηση CodeFields {Where=0, Numeric=1, Identifier=1, TypeOf=2}
+		
+		Γενική SOURCE$
+		Έγγραφο SOURCE$<={Programm here
+		}
+		
+		S_DIGIT$="[0-9]"
+		S_LETTER1$="[A-Z-]"
+		S_LETTER2$="[A-Z0-9-]"
+		
+		S_NUMBER=Λάμδα S_DIGIT$,  MissingNumber$ (where) ->{
+			i=where
+			Ενώ Μεσ$(SOURCE$, i,1) ~ S_DIGIT$: i++: Τέλος Ενώ
+			Αν i>where Τότε
+				=Αληθές, val(Μεσ$(SOURCE$,where,i-where)), i
+			Αλλιώς
+				=Ψευδές, 0, i, MissingNumber$
+			Τέλος Αν
+		}
+		
+		S_NAME=Λάμδα S_LETTER1$, S_LETTER2$,MissingName$ (where) ->{
+			i=where
+			Ενώ Μεσ$(SOURCE$, i,1) ~ S_LETTER1$: i++: Τέλος Ενώ
+			Αν i>where Τότε
+				Ενώ Μεσ$(SOURCE$, i,1) ~ S_LETTER2$: i++: Τέλος Ενώ
+				=Αληθές, Μεσ$(SOURCE$,where,i-where), i
+			Αλλιώς
+				=Ψευδές, "", i, MissingName$
+			Τέλος Αν
+		}
+		S_ADVANCE1=Λάμδα Linepos$ (max)->{
+			WhiteSpace$=χαρ$(9)+" "+χαρ$(10)+χαρ$(13)+"0"+";"+χαρκωδ$(160)
+			toline=1 : toPos=0 :  oldwhere=1 : cr$=χαρ$(10)
+			=Λάμδα WhiteSpace$, max, StopErr, toline, toPos, cr$, oldwhere, Linepos$ (where, &where$) ->{
+				i=where
+				toPos+=i-oldwhere
+				where$=μορφή$(Linepos$, toLine, toPos)
+				Αν StopErr Τότε
+					Διαμέσου 1000	
+				Αλλιώς.Αν i<=max Τότε
+					Ενώ instr(WhiteSpace$, Μεσ$(SOURCE$,i,1))>0
+						i++
+						Αν Μεσ$(SOURCE$,i,1)=cr$ Τότε toline++ : toPos=-1 Αλλιώς toPos++
+						Αν i=max Τότε Διαμέσου 1000: Διέκοψε
+					Τέλος Ενώ
+					where$=μορφή$(Linepos$, toLine, toPos+1)
+					oldwhere=i
+					=Αληθές, 0, i
+				Αλλιώς
+					Διαμέσου 1000
+				Τέλος Αν
+				Έξοδος
+			1000 	=Ψευδές, 0, max+1, "End of Source" :StopErr=Αληθές:Επιστροφή
+			}
+		}
+		Καθαρό SOURCE$
+		SOURCE$<=Κεφ$(Init_SOURCE$)
+		S_ADVANCE=S_ADVANCE1(Εγγράφου.Μήκος(SOURCE$))
+		Απαρίθμηση Place {OK=0, RetValue, NewPc, ErrMessage}
+		pc=1
+		resp=(Αληθές,)
+		Αν Εμφάνιση Τότε 
+			Αναφορά 6, "Start of Source"
+			Για Αυτό {
+				Αν  Init_SOURCE$="" Τότε Έξοδος
+				Τοπική lines$(), nl$=χαρ$(13)+χαρ$(10)
+				lines$()=Μέρος$(Init_SOURCE$, nl$)
+				Πίνακας lines$(1 Έως Μήκος(lines$()))
+				Αν Μήκος(lines$())<2 Τότε Διέκοψε
+				Τοπική i
+				Για i=0 Έως 59
+					Τύπωσε @(i+10, Γραμμή);(i+1) Υπολ 10,
+				Επόμενο
+				Τύπωσε
+				Για i=1 Έως Μήκος(lines$())-1
+					Τύπωσε Μέρος $(0), Γραφή$(i, "   0000  "), ~(11), @(10), lines$(i)
+					Τύπωσε
+				Επόμενο
+			}
+			Αναφορά 6, "End of Source"
+			Τύπωσε Πάνω $(6), "Lexar Analyser"
+			Τύπωσε
+		Τέλος Αν
+		Code=Λίστα
+		CodePc=1
+		Σταθερή IsName$="NAME", IsNumber$="NUMBER"
+		There$=""
+		NoMoreNewNames=Ψευδές
+		Ενώ resp#Τιμή(OK)
+		resp=S_ADVANCE(pc, &There$)
+		pc=resp#Τιμή(NewPc)
+		Αν Εμφάνιση Τότε Τύπωσε $(4),
+		Αν resp#Τιμή(OK) Τότε
+			resp=S_NUMBER(pc)
+			pc=resp#Τιμή(NewPc)
+			Αν resp#Τιμή(OK) Τότε
+				Αν NoPrintLexar Αλλιώς Δείξε_Κώδικα2(4, resp#Τιμή$(RetValue), 24, IsNumber$, 48,  There$)
+				Προσθήκη Code, CodePc:=(There$,resp#Τιμή(RetValue), IsNumber$)
+				CodePc++
+				pc=resp#Τιμή(NewPc)
+			Αλλιώς
+				resp=S_NAME(pc)
+				pc=resp#Τιμή(NewPc)
+				Αν resp#Τιμή(OK) Τότε
+					Αν Όχι Υπάρχει(identifiers, resp#Τιμή$(RetValue)) Τότε
+						Αν NoMoreNewNames Τότε resp=(Ψευδές, 0, 0, Und$+resp#Τιμή$(RetValue) ) : Έξοδος
+						Προσθήκη identifiers, resp#Τιμή$(RetValue):= 1
+						Προσθήκη Code, CodePc:=(There$,resp#Τιμή$(RetValue), IsName$)
+					Αλλιώς.Αν  Τύπος$(Identifiers,  resp#Τιμή$(RetValue))="Condition" Τότε
+						Προσθήκη Code, CodePc:=(There$,identifiers(resp#Τιμή$(RetValue)),resp#Τιμή$(RetValue))
+					Αλλιώς
+						Αν Όχι NoMoreNewNames Τότε
+							Αν "BEGINNING-OF-EXECUTION"=resp#Τιμή$(RetValue) Τότε
+								NoMoreNewNames=Αληθές
+						 	Τέλος Αν
+						Τέλος Αν
+						Προσθήκη Code, CodePc:=(There$,resp#Τιμή$(RetValue), IsName$)
+					Τέλος Αν
+					Αν NoPrintLexar Αλλιώς Δείξε_Κώδικα2(4, resp#Τιμή$(RetValue), 24,Code(CodePc)#Τιμή$(TypeOf),48, There$)
+					CodePc++
+					pc=resp#Τιμή(NewPc)
+				Τέλος Αν
+			Τέλος Αν	
+		Τέλος Αν
+		Τέλος Ενώ
+		Αν "End of Source"=resp#Τιμή$(ErrMessage) Τότε
+			Αν Εμφάνιση Τότε Τύπωσε Πάνω $(6), "Success OK"
+		Αλλιώς
+			Αν resp#Τιμή(OK) Αλλιώς Λάθος resp#Τιμή$(ErrMessage)+At$+There$ : Τύπωσε : Έξοδος
+		Τέλος Αν
+		Αν Εμφάνιση Τότε 
+			Τύπωσε
+			Τύπωσε Πάνω $(6), "Syntax Analyser"
+			Τύπωσε
+		Τέλος Αν
+		Αν codePc=1 Τότε Λάθος Αν$(Ελληνικά=Αληθές->"Τίποτα για Ανάλυση","Nothing to Analyse"): Έξοδος
+		i=1
+		Ruller=Λάμδα Add=0 (x=1, opcode=0)->{
+			Επίλεξε Με opcode
+			Με <0
+				Add+=4*opcode:Αν Add<0 Τότε Add=0
+			Με >0
+				Add+=4*opcode
+			Τέλος Επιλογής
+			Επίλεξε Με x
+			Με <=1
+				=0+ADD
+			Με 2
+				=12+ADD
+			Με <4
+				=12+(x-2)*4+ADD
+			Αλλιώς Με
+				=(X-1)*4
+			Τέλος Επιλογής
+		}
+		HaveErr=Ψευδές
+		R=Ruller(0,0)
+		Αν @Είδος(1, BEGINNING_OF_PROGRAM$, Ψευδές) Τότε
+			Δείξε_Κώδικα(BEGINNING_OF_PROGRAM$+" ",i)
+			R=Ruller(1,1)
+			Αν @Είδος(codePc-1, END_OF_PROGRAM$, Ψευδές) Τότε
+				i=2
+				Ενώ  @Είδος(i, DEFINE_NEW_INSTRUCTION$, Αληθές)
+					HaveErr=Αληθές
+					Αν @ΝέοΌνομα(i+1) Τότε
+						Αν  @Είδος(i+2, DEFINE_CONTINUE$, Ψευδές) Τότε
+							Δείξε_Κώδικα("DEFINITION "+code(i+1)#Τιμή$(Identifier)+" ",i)
+							ΤωρινόςΟρισμός$=code(i+1)#Τιμή$(Identifier)
+							Ακολουθία=(,)
+							R=Ruller(1, 1)
+							i+=3
+							Μπλοκ(Ψευδές)
+							R=Ruller(1, -1)
+							Αν HaveErr Τότε Έξοδος
+							Προσθήκη Κώδικας, ΤωρινόςΟρισμός$:=Ακολουθία
+						Τέλος Αν
+					Αλλιώς
+						Έξοδος
+					Τέλος Αν			
+				Τέλος Ενώ
+				Αν HaveErr Τότε Διέκοψε
+				Αν Starting_Identifiers<Μήκος(Identifiers) Τότε
+					s$=""
+					Για j=Starting_Identifiers Έως Μήκος(Identifiers)-1
+						// key, value by index
+						Αν  Identifiers(j!)=1 Τότε s$+=" "+Εκφρ$(Identifiers, j): HaveErr=Αληθές
+					Επόμενο
+				Τέλος Αν
+				Ακολουθία=(,)
+				Αν HaveErr Τότε Λάθος Lookdef$+s$ : Διέκοψε
+				Αν  @Είδος(i, BEGINNING_OF_EXECUTION$, Ψευδές) Τότε
+					Αν  @Είδος(codePc-2, END_OF_EXECUTION$, Ψευδές) Τότε
+						Δείξε_Κώδικα(BEGINNING_OF_EXECUTION$+" ",i)
+						R=Ruller(1,1)
+						codePc--
+						i++
+						Εκτέλεση(Ψευδές)
+					Τέλος Αν
+					Αν HaveErr Τότε Έξοδος
+					R=Ruller(1,-1)
+					Αν  codePc-1=i Τότε
+						Δείξε_Κώδικα(END_OF_EXECUTION$+" ",i)
+						R=Ruller(1,-1)
+					Τέλος Αν
+					i++
+					Αν  codePc=i Τότε
+						Δείξε_Κώδικα(END_OF_PROGRAM$+" ",i)
+						Προσθήκη Κώδικας, 0:=Ακολουθία
+					Αλλιώς
+						Λάθος SyntaxError$, code(i)#Τιμή$(Where) :HaveErr=Αληθές
+					Τέλος Αν
+				Τέλος Αν
+			Τέλος Αν
+		Τέλος Αν
+	Τέλος Ρουτίνας
+	Συνάρτηση Είδος(i, what$, NoErr)
+		Αν i>=codePc Τότε
+			Λάθος miss$+what$+Unendsource$
+		Αλλιώς.Αν code(i)#Τιμή$(identifier)<>what$ Τότε
+			Αν NoErr Αλλιώς Λάθος miss$+what$+At$+code(i)#Τιμή$(Where) :HaveErr=Αληθές
+		Αλλιώς
+			=Αληθές
+		Τέλος Αν
+	Τέλος Συνάρτησης
+	Συνάρτηση ΒάσειΤύπου(i, what$)
+		Αν i>=codePc Τότε
+			Λάθος Mtof$+what$+Unendsource$
+		Αλλιώς.Αν code(i)#Τιμή$(TypeOf)<>what$ Τότε
+			Λάθος Mtof$+what$+At$+code(i)#Τιμή$(Where) :HaveErr=Αληθές
+		Αλλιώς
+			=Αληθές
+		Τέλος Αν
+	Τέλος Συνάρτησης
+	Συνάρτηση Πραγμ_Τύπος(i, what$)
+		Αν i>=codePc Τότε
+			Λάθος Mtof$+what$+Unendsource$
+		Αλλιώς
+			Αν Τύπος$(code,i,identifier)<>what$ Τότε
+				Λάθος Mtof$+what$+At$+code(i)#Τιμή$(Where) :HaveErr=Αληθές
+			Αλλιώς
+				=Αληθές
+			Τέλος Αν
+		Τέλος Αν
+	Τέλος Συνάρτησης
+	Συνάρτηση ΝέοΌνομα(i)
+		Αν i>=codePc Τότε
+			Λάθος  Mtof$+IsName$+Unendsource$
+		Αλλιώς.Αν code(i)#Τιμή$(TypeOf)<>IsName$ Τότε
+			Λάθος Mtof$+IsName$+At$+code(i)#Τιμή$(Where)
+			HaveErr=Αληθές
+		Αλλιώς.Αν Υπάρχει(Identifiers, code(i)#Τιμή$(Identifier)) Τότε
+			Αν Identifiers(code(i)#Τιμή$(Identifier))=1 Τότε
+				Επιστροφή  Identifiers, code(i)#Τιμή$(Identifier):=i+3
+				=Αληθές
+			Αλλιώς
+				Λάθος ThisId$ + code(i)#Τιμή$(Identifier)+ExErr$+code(i)#Τιμή$(Where)
+				HaveErr=Αληθές
+			Τέλος Αν
+		Αλλιώς
+			Προσθήκη Identifiers, code(i)#Τιμή$(Identifier):=i+3
+			=Αληθές
+		Τέλος Αν
+	Τέλος Συνάρτησης
+	Ρουτίνα Μπλοκ(Skip)
+		HaveErr=Ψευδές
+		Αν @Είδος(i, BEGIN_BLOCK$, Skip) Τότε
+			Δείξε_Κώδικα("CODE BLOCK("+BEGIN_BLOCK$+")",i)
+			R=Ruller(1,1)
+			i++
+			HaveErr=Αληθές
+			Τοπική mine=Αληθές
+			Τέλος_Μπλοκ()
+			Αν mine and HaveErr Τότε
+				Λάθος miss$+END_BLOCK$+Eat$+code(i)#Τιμή$(Where)
+			Τέλος Αν
+		Αλλιώς.Αν Όχι skip Τότε
+			HeveErr=Αληθές
+		Τέλος Αν
+	Τέλος Ρουτίνας
+	Ρουτίνα Τέλος_Μπλοκ()
+		Τοπική oldi
+	100	mine=Αληθές
+		Αν @Είδος(i, END_BLOCK$, Αληθές) Τότε 101
+		Αν i>=codePc Τότε Έξοδος Ρουτίνας
+		Αν @Τερματικό() Τότε
+			HaveErr=Αληθές
+			Έξοδος Ρουτίνας
+		Τέλος Αν
+		oldi=i
+		Εκτέλεση(Αληθές)
+		Αν HaveErr Τότε mine=Ψευδές: Έξοδος Ρουτίνας
+		Αν i=oldi Τότε
+			Αν CodePc-1<=i Τότε
+				HaveErr=Αληθές
+				mine=Αληθές
+			Τέλος Αν
+		 	Έξοδος Ρουτίνας
+		Τέλος Αν
+		Προς 100
+	101	R=Ruller(1,-1)
+		Δείξε_Κώδικα("CODE BLOCK("+END_BLOCK$+")",i)
+		i++
+	Τέλος Ρουτίνας
+	Ρουτίνα Εκτέλεση(One as boolean)
+		Τοπική tp$, that
+	110	Αν i>=codePc Τότε Έξοδος Ρουτίνας
+		Μπλοκ(Αληθές)
+		Αν HaveErr Τότε Έξοδος Ρουτίνας
+		Αν  code(i)#Τιμή$(TypeOf)=IsName$ Τότε
+			tp$=Τύπος$(identifiers, code(i)#Τιμή$(Identifier))
+			Αν tp$="Instruction" Τότε
+				οδηγία()
+			Αλλιώς.Αν tp$="ControlStatements" Τότε
+				that=(,)
+				Προσθήκη Ακολουθία, (that,)
+				ροή(identifiers(code(i)#Τιμή$(Identifier)), that)				
+			Αλλιώς.Αν  identifiers(code(i)#Τιμή$(Identifier))>0 Τότε
+				Δείξε_Κώδικα("CALL("+code(i)#Τιμή$(Identifier)+")",i)
+				Προσθήκη Ακολουθία, ((2, code(i)#Τιμή$(Identifier), code(i)#Τιμή$(Where)),)
+			Αλλιώς.Αν  identifiers(code(i)#Τιμή$(Identifier))=-1000 Τότε
+				Έξοδος Ρουτίνας
+			Αλλιώς
+				Λάθος SyntaxError$, code(i)#Τιμή$(Where) :HaveErr=Αληθές
+			Τέλος Αν
+		Αλλιώς
+			Λάθος SyntaxError$, code(i)#Τιμή$(Where) :HaveErr=Αληθές
+		Τέλος Αν
+		Αν HaveErr Τότε Έξοδος Ρουτίνας
+		i++
+		Αν one Αλλιώς Προς 110
+	Τέλος Ρουτίνας
+	Ρουτίνα οδηγία()
+		Δείξε_Κώδικα("οδηγία("+code(i)#Τιμή$(Identifier)+")",i)
+		Προσθήκη Ακολουθία, ((1, code(i)#Τιμή$(Identifier), code(i)#Τιμή$(Where)),)
+	Τέλος Ρουτίνας
+	Ρουτίνα ροή(m ως ControlStatements, codepiece ως Πίνακας)
+		Τοπική N, oldi
+		Από Base_-m Προς whileStat, ifStat , iterateStat
+		whileStat:
+			Αν Όχι @Πραγμ_Τύπος(i+1, "Condition") Τότε Έξοδος Ρουτίνας
+			i++
+			N=code(i)#Τιμή(identifier)
+			Αν Όχι @Είδος(i+1, LOOP_CONTINUE$, Ψευδές) Τότε Έξοδος Ρουτίνας
+			Δείξε_Κώδικα("FLOW CONTROL("+Κεφ$(Φίλτρο$(Εκφρ$(m),"_"))+" "+code(i)#Τιμή$(TypeOf)+" "+LOOP_CONTINUE$+")",i-1)
+			Τοπική Ακολουθία=(,)
+			Προσθήκη codepiece, (5,code(i-1)#Τιμή$(Where) ,code(i)#Τιμή$(TypeOf), Ακολουθία)
+			i+=2
+			HaveErr=Ψευδές
+			oldi=i
+			Μπλοκ(Αληθές)	
+			Αν oldi=i Τότε
+				R=Ruller(1,4)		
+				Εκτέλεση(Αληθές)
+				R=Ruller(1,-4)
+			Τέλος Αν
+			Αν Όχι HaveErr Τότε Αν oldi=i Τότε HaveErr=Αληθές : ΧωρίςΟδηγία() : Έξοδος Ρουτίνας
+			i--
+			Έξοδος Ρουτίνας
+		ifStat:
+			Αν Όχι @Πραγμ_Τύπος(i+1, "Condition") Τότε Έξοδος Ρουτίνας
+			i++
+			N=code(i)#Τιμή(identifier)
+			Αν Όχι @Είδος(i+1, IF_THEN$, Ψευδές) Τότε Έξοδος Ρουτίνας
+			Δείξε_Κώδικα("FLOW CONTROL("+Κεφ$(Φίλτρο$(Εκφρ$(m),"_"))+" "+code(i)#Τιμή$(TypeOf)+" "+IF_THEN$+")",i-1)
+			Τοπική Ακολουθία=(,)
+			Προσθήκη codepiece, (4, code(i-1)#Τιμή$(Where) , code(i)#Τιμή$(TypeOf), Ακολουθία)
+			i+=2
+			HaveErr=Ψευδές
+			oldi=i
+			Μπλοκ(Αληθές)
+			Αν oldi=i Τότε
+				R=Ruller(1,4)		
+				Εκτέλεση(Αληθές)
+				R=Ruller(1,-4)
+			Τέλος Αν
+			Αν Όχι HaveErr Τότε Αν oldi=i Τότε HaveErr=Αληθές : ΧωρίςΟδηγία() : Έξοδος Ρουτίνας
+			Αν Όχι @Είδος(i, IF_ELSE$, Αληθές) Τότε i--: Έξοδος Ρουτίνας
+			Δείξε_Κώδικα("FLOW CONTROL("+IF_ELSE$+")",i)
+			Τοπική Ακολουθία=(,)
+			Προσθήκη codepiece, (Ακολουθία,)
+			i++
+			HaveErr=Ψευδές
+			oldi=i
+			Μπλοκ(Αληθές)
+			Αν oldi=i Τότε
+				R=Ruller(1,4)		
+				Εκτέλεση(Αληθές)
+				R=Ruller(1,-4)
+			Τέλος Αν
+			Αν Όχι HaveErr Τότε Αν oldi=i Τότε HaveErr=Αληθές : ΧωρίςΟδηγία() : Έξοδος Ρουτίνας
+			i--
+			Έξοδος Ρουτίνας
+		iterateStat:
+			Αν Όχι @ΒάσειΤύπου(i+1, IsNumber$) Τότε Έξοδος Ρουτίνας
+			i++
+			N=code(i)#Τιμή(Numeric)
+			Αν Όχι @Είδος(i+1, ITERATE_CONTINUE$, Ψευδές) Τότε Έξοδος Ρουτίνας
+			Δείξε_Κώδικα("FLOW CONTROL("+Κεφ$(Φίλτρο$(Εκφρ$(m),"_"))+" "+code(i)#Τιμή$(numeric)+" "+ITERATE_CONTINUE$+")", i-1)
+			Τοπική Ακολουθία=(,)
+			Προσθήκη codepiece, (3, code(i-1)#Τιμή$(Where) ,code(i)#Τιμή$(numeric), Ακολουθία)
+			i+=2
+			HaveErr=Ψευδές
+			oldi=i
+			Μπλοκ(Αληθές)
+			Αν oldi=i Τότε
+				R=Ruller(1,4)
+				Εκτέλεση(Αληθές)
+				R=Ruller(1,-4)
+			Τέλος Αν
+			Αν Όχι HaveErr Τότε Αν oldi=i Τότε HaveErr=Αληθές : ΧωρίςΟδηγία() : Έξοδος Ρουτίνας
+			i--
+	Τέλος Ρουτίνας
+	Συνάρτηση Τερματικό()
+		=Ψευδές 
+		Αν Όχι code(i)#Τιμή$(TypeOf)=IsNumber$ Τότε
+			Αν Υπάρχει(Identifiers, code(i)#Τιμή$(identifier)) Τότε
+				=Εκφρ(identifiers)=-3000
+			Τέλος Αν
+		Τέλος Αν
+	Τέλος Συνάρτησης
+	Ρουτίνα ΧωρίςΟδηγία()
+	Λάθος Expstat$+code(i)#Τιμή$(Where)
+	Τέλος Ρουτίνας
+	Ρουτίνα Δείξε_Κώδικα(What$, p)
+		Αν Εμφάνιση Αλλιώς Έξοδος Ρουτίνας
+		Αν  p Υπολ 2=1 Τότε Τύπωσε Πάνω ~(Πένα, 1,1), ""
+		Τύπωσε Μέρος @(Ruller()), ~(15),what$,@(width-10), ~(#FFCCFF), code(p)#Τιμή$(Where)
+		Τύπωσε
+		Ανανέωση
+	Τέλος Ρουτίνας
+	Ρουτίνα Δείξε_Κώδικα2(n, one$, n1, two$, n2, three$)
+		Αν Εμφάνιση Τότε Τύπωσε @(n), two$, @(n1), one$, @(n2), three$
+		Ανανέωση
+	Τέλος Ρουτίνας
+}
+
+Απαρίθμηση Εκτύπωση {Με_Εκτύπωση=-1, Χωρίς_Εκτύπωση}
+Κάνε Επιστροφή$
+Εκτελέσιμο=Λίστα
+Δες οκ {
+	Κάλεσε Συνάρτηση Κάρελ, {BEGINNING-OF-PROGRAM
+
+		DEFINE turnright AS
+		BEGIN
+			Iterate 4 times turnleft  FINDPASS END
+		DEFINE FINDPASS AS
+		BEGIN WHILE FRONT-IS-BLOCKED DO  turnleft
+		END
+		BEGINNING-OF-EXECUTION
+			IF RIGHT-IS-BLOCKED THEN bEGIN
+			ITERATE 3 TIMES BEGIN Begin begin turnright TURNLEFT End
+				begin 	MOVE end end WHILE FRONT-IS-BLOCKED DO FINDPASS
+				END END else BEGIN turnoff end
+		END-OF-EXECUTION
+		
+	END-OF-PROGRAM
+	}, χωρίς_Εκτύπωση, &Επιστροφή$, Εκτελέσιμο
+}
+Αν Λάθος ή όχι ΟΚ Τότε Τύπωσε "Πρόβλημα στο Κώδικα:"+Επιστροφή$ : Έξοδος
+Τύπωσε "Κώδικας AST"
+Τύπωσε "Έχει ";Μήκος(Εκτελέσιμο);" μέρη"
+Αν Μήκος(Εκτελέσιμο)=0 Τότε Έξοδος
+Μ=Κάθε(Εκτελέσιμο)
+Ενώ Μ
+	κ=Εκφρ(Μ)
+	Αν Εκφρ$(Μ!)<>"0" Τότε Τύπωσε "Ορισμός:"; Αλλιώς Τύπωσε "Κύριο Πρόγραμμα";
+	Τύπωσε Εκφρ$(Μ!);" έχει ";Μήκος(κ);" μέρη"
+Τέλος Ενώ
+Τύπωσε "Εικονική Εκτέλεση Κώδικα απευθείας από το AST - δένδρο Ακολουθιών"
+Μήνυμα$=""
+Ακολουθία(Εκτελέσιμο(0), &Μήνυμα$)
+Αν Μήνυμα$="__ΤΕΛΟΣ__" Τότε
+	Τύπωσε "ΤΕΛΟΣ ΕΚΤΕΛΕΣΗΣ - ΟΚ "
+Αλλιώς.Αν Μήνυμα$="" Τότε
+	Τύπωσε "ΑΝΤΙΚΑΝΟΝΙΚΟΣ ΤΕΡΜΑΤΙΣΜΟΣ ΕΚΤΕΛΕΣΗΣ - χωρίς εντολή TURNOFF"
+Αλλιώς
+	Τύπωσε "ΤΕΡΜΑΤΙΣΜΟΣ ΛΟΓΩ ΛΑΘΟΥΣ ΑΠΟ ΕΞΩΤΕΡΙΚΟ ΓΕΓΟΝΟΣ: ";Μήνυμα$
+Τέλος Αν
+Τέλος
+Ρουτίνα Ακολουθία(ακολουθία, &Τι$)
+	Τοπική μετρ=-1, εντολή, αρ, Μην$, ι
+100	μετρ++
+	Αν Μήκος(Μην$)>0 Τότε Τι$+=Μην$ : Έξοδος Ρουτίνας
+	Αν μετρ>=μήκος(ακολουθία) τότε Έξοδος Ρουτίνας
+	εντολή=ακολουθία#τιμή(μετρ)
+	αρ=εντολή#τιμή(0)
+	Από αρ Προς 110, 120, 130, 150, 190
+110	ΕκτέλεσεΕντολή(): Προς 100
+120	Τύπωσε "Κλήση "+εντολή#τιμή$(1):Ακολουθία(Εκτελέσιμο(εντολή#τιμή$(1)), &Μην$): Προς 100
+130	ι=εντολή#τιμή(2)
+140	Τύπωσε "Επανάληψη ";ι;" φορές ακόμα":Ακολουθία(εντολή#τιμή(3), &Μην$): ι--: Αν ι=0  ή Μήκος(Μην$)>0 Τότε 100: Αλλιώς 140
+150	Αν @ΔεςΣυνθήκη(εντολή#τιμή$(2)) Τοτε
+155		Ακολουθία(εντολή#τιμή(3), &Μην$)
+160	Αλλιώς.Αν Μήκος(εντολή)=5 τότε
+165		Ακολουθία(εντολή#τιμή(4), &Μην$)
+170	Τέλος Αν
+180	Προς 100
+190	Αν @ΔεςΣυνθήκη(εντολή#τιμή$(2)) Αλλιώς 100
+200	Ακολουθία(εντολή#τιμή(3), &Μην$): Αν Μήκος(Μην$)>0 Τότε 100 Αλλιώς 190
+Τέλος Ρουτίνας
+Ρουτίνα ΕκτέλεσεΕντολή()
+	Τοπική αναδ$
+	Τύπωσε "Εντολή:";εντολή#Τιμή$(1)
+	Τύπωσε "Δώσε Ανάδραση (θα σταματήσει ο κώδικας αν δώσεις κάτι αλλιώς πάτα Enter)"
+	Εισαγωγή ">" , αναδ$
+	μην$=αποκ$(αναδ$)
+	Αν Μήκος(μην$)>0 Τότε
+	μην$+=" "+εντολή#Τιμή$(2)
+	Αλλιώς.Αν εντολή#Τιμή$(1)="TURNOFF" Τότε
+	μην$="__ΤΕΛΟΣ__"
+	Τέλος Αν
+Τέλος Ρουτίνας
+Συνάρτηση ΔεςΣυνθήκη(ποια$)
+	Τοπική εισ=0&
+	Τύπωσε "Δώσε για συνθήκη:"+ποια$+" τιμή (0, μη μεδενική τιμή = 1):"
+	Εισαγωγή "", εισ
+	=εισ<>0
+Τέλος Συνάρτησης
+}
