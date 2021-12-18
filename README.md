@@ -1,9 +1,9 @@
-Version 0.01
+Version 1.0
 
-This is the first version of the Karel The Robot. 
+This is the greek version of the Karel The Robot, the Karel World Creator. 
 
-There is only the user interface to create the Karel World. So wait for next versions.
+So now wait to get the next program, the Karel Virtual Machine.
 
 Written in M2000 Interpreter.
 
-<img src="screenshoot1.png" alt="screenshoot1" style="zoom:50%;" />
+<img src="screenshoot2.png" alt="screenshoot1" style="zoom:50%;" />
