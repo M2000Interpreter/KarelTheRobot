@@ -1,0 +1,816 @@
+﻿MODULE GLOBAL A {list1$={
+      {    
+          "Magic Id" : "11223344Karel",
+          "Locale Id" : 1032,
+          "\u03A4\u03AF\u03C4\u03BB\u03BF\u03C2 \u039A\u03CC\u03C3\u03BC\u03BF\u03C5" : "\u039A\u039F\u03A3\u039C\u039F\u03A31",
+          "\u039A\u03CC\u03C3\u03BC\u03BF\u03C2" : {        
+              "\u03A0\u03BB\u03AC\u03C4\u03BF\u03C2" : 20,
+              "\u038E\u03C8\u03BF\u03C2" : 10,
+              "\u0395\u03BC\u03C0\u03CC\u03B4\u03B9\u03B1" : {            
+                  "1, 1" : 1,  "1, 2" : 1, "1, 3" : 1, "1, 4" : 1, "1, 5" : 1, "1, 6" : 1, "1, 7" : 1, "1, 8" : 1, "1, 9" : 1,
+                  "2, 1" : 1, "2, 5" : 3, "2, 9" : 1, "3, 1" : 1, "3, 4" : 1, "3, 5" : 1, "3, 6" : 1, "3, 9" : 1, "4, 1" : 1,
+                  "4, 5" : 1, "4, 9" : 1, "5, 1" : 3, "5, 2" : 3, "5, 3" : 3, "5, 4" : 3, "5, 5" : 3, "5, 6" : 3, "5, 7" : 3,
+                  "5, 8" : 3, "5, 9" : 3, "6, 1" : 1, "6, 4" : 1, "6, 5" : 2, "6, 9" : 1, "7, 1" : 1, "7, 4" : 1, "7, 5" : 2,
+                  "7, 9" : 1, "8, 1" : 1, "8, 2" : 1, "8, 3" : 2, "8, 4" : 1, "8, 5" : 2, "8, 6" : 1, "8, 7" : 1, "8, 8" : 1,
+                  "8, 9" : 1, "9, 1" : 1, "9, 2" : 3, "9, 3" : 2, "9, 4" : 3, "9, 5" : 1, "9, 9" : 1, "10, 1" : 1, "10, 2" : 1,
+                  "10, 4" : 3, "10, 5" : 2, "10, 9" : 1, "11, 1" : 1, "11, 3" : 3, "11, 4" : 2, "11, 5" : 1, "11, 9" : 1,
+                  "12, 1" : 1, "12, 2" : 3, "12, 3" : 1, "12, 4" : 1, "12, 5" : 3, "12, 6" : 1, "12, 7" : 1, "12, 8" : 1,
+                  "12, 9" : 1, "13, 1" : 1, "13, 2" : 2, "13, 3" : 3, "13, 5" : 3, "13, 9" : 1, "14, 1" : 1, "14, 3" : 2,
+                  "14, 5" : 1, "14, 9" : 1, "15, 1" : 3, "15, 2" : 1, "15, 3" : 1, "15, 4" : 1, "15, 5" : 2, "15, 6" : 1,
+                  "15, 7" : 1, "15, 8" : 1, "15, 9" : 1, "16, 1" : 1, "16, 5" : 1, "16, 9" : 1, "17, 1" : 1, "17, 5" : 1,
+                  "17, 9" : 1, "18, 1" : 1, "18, 2" : 3, "18, 3" : 1, "18, 4" : 1, "18, 5" : 1, "18, 6" : 1, "18, 7" : 1,
+                  "18, 8" : 1, "18, 9" : 2, "19, 1" : 1, "19, 2" : 4, "19, 3" : 4, "19, 4" : 4, "19, 5" : 4, "19, 6" : 4,
+                  "19, 7" : 4, "19, 8" : 4, "19, 9" : 1
+              },
+              "\u039C\u03C0\u03B9\u03BC\u03C0\u03B5\u03C1" : {            
+                  "2, 4" : 1, "2, 8" : 1, "2, 9" : 1, "3, 3" : 1, "3, 6" : 1, "4, 2" : 1, "5, 4" : 1, "6, 2" : 1, "6, 4" : 1,
+                  "6, 8" : 1, "7, 4" : 1, "9, 2" : 1, "9, 3" : 1, "9, 4" : 1, "9, 9" : 1, "10, 3" : 1, "10, 4" : 1, "10, 6" : 1,
+                  "10, 7" : 1, "11, 2" : 1, "11, 4" : 1, "11, 5" : 1, "13, 3" : 1, "15, 6" : 1, "15, 7" : 1, "16, 3" : 1,
+                  "17, 3" : 1, "17, 9" : 1, "18, 9" : 1, "19, 6" : 1
+              },
+              "\u03A3\u03BA\u03BF\u03C0\u03CC\u03C2" : 2,
+              "\u03A3\u03B7\u03BC\u03B5\u03B9\u03CE\u03C3\u03B5\u03B9\u03C2" : ""
+          },
+          "\u039A\u03AC\u03C1\u03B5\u03BB" : {        
+              "\u03A3\u03AC\u03BA\u03BF\u03C2" : 10,
+              "\u0398\u03AD\u03C3\u03B7\u03A7" : 5,
+              "\u0398\u03AD\u03C3\u03B7\u03A5" : 1,
+              "\u0392\u03BB\u03AD\u03C0\u03B5\u03B9" : 2,
+              "\u03A7\u03C1\u03CE\u03BC\u03B1" : -16776960
+          }
+      }
+}
+Title "IDE"
+Gosub Init
+Declare IDE_Karel Form
+method IDE_Karel, "move", 1000+MOTION.XW,1000+MOTION.YW, TWIPSX*1024, TWIPSY*600
+Declare Karel_Pad EditBox Form IDE_Karel
+Declare Karel_List ListBox Form IDE_Karel
+Declare Karel_Status ListBox Form IDE_Karel
+With IDE_Karel,"UseIcon", True, "UseReverse", True, "Quit" as Quit
+With IDE_Karel, "Title" as Caption$, "Visible" as Visible, "TitleHeight" as tHeight, "Sizable", True
+Method IDE_Karel,"MakeStandardInfo", 1
+Method IDE_Karel, "FontAttr", "Verdana", 18, true   '  size=12, bold=true
+Method Karel_List, "FontAttr", "Verdana", 14, true   '  size=12, bold=true
+Method Karel_Pad, "FontAttr", "Verdana", 14, true   '  size=12, bold=true
+Method Karel_Status, "FontAttr", "Verdana", 12, true 
+Method Karel_List, "SetBarStyle", color(50, 100,  200), 5, 15
+Method Karel_Pad, "SetBarStyle", color(50, 100,  200), 5, 15
+With Karel_Pad, "NoWrap", True, "SelLength" as SelLength, "HighlightParagraph", True, "Locked" as lockPad
+With Karel_List, "ShowAlways", true, "Text", listtext$, "transparent", false,
+with Karel_list, "visible" as karel_list.visible , "maychange", false, "SkipFirstClick", true, "Locked" as lock
+With Karel_Status, "ShowAlways", true,"Text" as status$, "transparent", true, "HideCaret", True, "displaylines", 1
+With IDE_Karel, "Width" as NP.Width, "Height" as NP.Height, "TitleHeight" as tHeight
+splitval=NP.Width/3
+splitvalV=theight*3
+Method Karel_List, "Colors", color(240,240,255), 1
+With Karel_List,  "List" As List$(), "listindex" as ListIndex, "title", "IDE Menu", "HideCaret", True 
+With Karel_Pad, "Text" as Pad.Text$, "NoColor", False, "ShowAlways", True, "SpaceIndent", 3
+With Karel_Pad, "ColorCollection1", KAREL_COMMAND$+"|", "visible" as karel_pad.visible
+With Karel_Pad, "ColorCollection3", LASTPART$+"|"
+With Karel_Pad, "ColorCollection4", FLAGS$+"|",  "Default", true
+With Karel_Pad, "Seltext" as SelText$, "SelStart" as SelStart, "SelLength" as SelLength, "InsertTextNoRender" as Insert$
+Module InnerControl (listbox) {
+	// control is the real control on form
+	// which our listbox "subclass it"
+	method listbox, "control" as control
+	with control, "dcolor", -Color(255,40,0), "CapColor", -color(11)
+	with control, "backcolor", -Color(240,240,255), "forecolor", -color(1)
+}
+InnerControl Karel_List
+
+With Karel_Pad, "WordCharRightButIncluded", "-", "StartSymbols", "123456789"+that$
+With Karel_Pad, "WordCharLeft"," ", "WordCharRight", " ", "DropSym", "-", "EXTRAFRONT", "FLRBNAEflrbnae"+that$, "LineComment1","", "LineComment2", "", "CommentSymbols","", "ComSymbolsWidth", 0, "CommentLineLight", false, "MultiLineComment1", "","MultiLineComment2", ""
+'With Karel_Pad, "WordCharLeft"," ", "WordCharRight", " ", "EXTRAFRONT","FLRBNAEflrbnae"
+Method  Karel_Pad, "UserColorSet",0,,,0,-color(5), -#005588
+With Karel_Pad, "ColorSet", -1
+Pad.Text$={BEGINNING-OF-PROGRAM
+            DEFINE MOVE-IF-YOU-CAN AS
+               BEGIN
+                  IF FRONT-IS-CLEAR THEN
+                        MOVE
+               END
+               BEGINNING-OF-EXECUTION
+                  MOVE-IF-YOU-CAN
+                  TURNOFF
+               END-OF-EXECUTION
+            END-OF-PROGRAM
+            }
+Function Karel_Pad.PopUp {
+	status$=heditor$
+	Method Karel_Status,"Refresh"
+	Method Karel_List,"GetFocus"
+	blockmouse2=false
+}
+msg$="Line:{0}, Position:{1}"+tab$+"| No Karel World Loaded  yet"
+Function Karel_Pad.Inform {
+	Read New L, P
+	status$=format$(msg$, L,P)
+	Method Karel_Status,"Refresh"
+	Method Karel_Pad,"Show"
+}
+Function Info$(x) {
+	select case x
+	case 7
+		=" (DEFINE User_Instruction AS  one statement or BEGIN statement(s) END)"
+	case 8
+		=" (IF flag THEN  one statement or BEGIN statement(s) END | optional ELSE )"
+	case 9
+		=" (After complete IF we can add this ELSE  one statement or BEGIN statement(s) END)"
+	case 10
+		=" (ITERATE positiveNumber TIMES  one statement or BEGIN statement(s) END)"
+	case 11
+		=" (WHILE flag DO  one statement or BEGIN statement(s) END"		
+	case 1 to 6
+		=" (command)"
+	case 13 to 16
+		=" (last part of command)"
+	case 18 to 22
+		=" (built in instruction)"
+	case 24 to 43
+		=" (flags used in IF flag THEN and WHILE flag DO)"
+	case 45
+		=" from file"
+	case 46
+		= " to file"
+	case 47
+		=" (Save before erase the program)"
+	case 48 to 49
+		=" (Using a Karel World)"
+	case 51
+		=" (From  disk)"
+	case 53
+		=" ("+ltrim$(heditor$)+")"
+	case 54
+		=" ("+ltrim$(heditor2$)+")"	
+	case else
+		=" not defined yet"
+	end select
+}
+blockmouse2=false
+Function Karel_List.PopUp {
+	blockmouse2=true
+	Method Karel_Pad,"GetFocus"
+}
+
+Function Karel_List.dblClick {
+	Read New Who
+	if blockmouse2 then blockmouse2~: exit
+	local w$=list$(Who)
+	if left$(w$,1)<>tab$ then exit
+	if who>44 then
+		select case ucase$(w$)
+		case "LOAD"
+			beep
+		case else
+			beep:beep
+		end select
+	else
+		if sellength>0 then
+			Insert$=mid$(w$,2)
+		else
+			Seltext$=mid$(w$,2)
+			Method Karel_pad, "RemoveUndo", mid$(w$,2)
+			sellength=0
+			SelStart=SelStart+len(mid$(w$,2))
+		end if
+		Method Karel_Pad,"GetFocus"
+	end if
+}
+Function Karel_List.Scroll {
+	Read New Who
+	local w$=list$(Who-1)
+	if left$(w$,1)<>tab$ then exit
+	status$=mid$(w$,2)+info$(Who-1)
+	Method Karel_Status,"Refresh"
+	blockmouse2=false
+}
+Function Karel_List.Click {
+		call local Karel_List.Scroll()
+}
+Function Karel_List.Color {
+	Read New &rgb
+	rgb=#007FFF
+}
+Function Karel_List.Sep {
+	Read New &d
+	if exist(Blocked, List$(d)) then d=-1
+}
+i9=false
+i7=false
+minim1=theight+3*TWIPSY
+minim2=minim1+6*TWIPSY
+Function IDE_Karel.mousemove {
+	Read new B, S, X, Y
+	local tHeight1=max.data(splitvalV, minim2), theight2=NP.Height-tHeight, mm
+	tHeight1=min.data(tHeight1,  NP.Height-tHeight)
+	if i7 then
+		if y>minim1 and y<theight2+3*twipsY then
+			if Binary.And(B,1)=1 then
+				splitvalV=y: call local IDE_Karel.Resize()
+			else
+				layer IDE_Karel {mouse.icon 1}: i7=false
+			end if
+		else
+			layer IDE_Karel {mouse.icon 1}: i7=false
+		end if
+	else.if x>3*twipsx and x<Np.Width-3*twipsx then
+		if y>tHeight1 and y<theight2  and karel_pad.visible then
+			if i9 and Binary.And(B,1)=1 then splitval=NP.Width-x: call local IDE_Karel.Resize()
+			if i9 else layer IDE_Karel {mouse.icon 9: refresh}
+			i9=true
+		else.if y>tHeight1-3*twipsY and y<theight2 then
+			i9=false
+			layer IDE_Karel {mouse.icon 7: refresh}
+			i7=true
+		else
+			if i9 then layer IDE_Karel {mouse.icon 1}: i9=false: call local IDE_Karel.Resize()
+		end if
+	else
+		if i9 then layer IDE_Karel {mouse.icon 1}: i9=false: call local IDE_Karel.Resize()
+	end if
+}
+Function IDE_Karel.Resize {
+	local Npheight=Np.height, NpWidth=Np.Width
+	local tHeight1=max.data(splitvalV, minim2)
+	tHeight1=min.data(tHeight1,  Npheight-tHeight)
+	if i9 else
+	Layer IDE_Karel {
+			Cursor 0,2
+			Move !
+			REFRESH 5000
+			gradient Color(255, 160, 0) , Color(255, 160, 0)
+			if theight1>=minim2 then
+				posS=pos.Y:wWidth=NpWidth:posM1=min.data(np.width, Npheight)/1.1
+				Call Local PrepareWorld()
+				move 3*twipsx, minim1
+				path {
+					Path {POLYGON 0, Np.Width-twipsX*6, 0,0,theight1-minim2,-Np.Width+twipsX*6,0,0,-theight1+minim2};
+				};
+				gradient #aFaFFF,#FFFFaF
+				cursor 0,1
+				Report 2, "Karel World"
+				move np.width/50 , Npheight/50
+				prevLine=list
+				move 0, posS
+				move (wWidth-ka*xC) div 2-ks ', ((posM1-posS)-ka*(yC)) div 2+posS+ks
+				
+				World.Display
+				Outline=ceil(14000/ka)
+				KarelRobot=>DrawFirst
+
+				path {};
+			end if
+				REFRESH 20
+		}
+	end if
+	local pw=min.data(max.data(NP.Width-splitval, 2000), NP.Width-1000)
+	local nw=NP.Width-pw
+	If not valid(mm) then i9=false
+	If  tHeight1< Npheight-tHeight*2  Then
+		lock=false : lockPad=false	
+		Method Karel_Pad,"move", twipsX*3, tHeight1,  pw-twipsX*6, Npheight-tHeight1-tHeight
+		Method Karel_List,"move", twipsX*3+pw, tHeight1,  nw-twipsX*6, Npheight-tHeight1-tHeight
+		with karel_pad, "visible", true
+		karel_list.visible=true
+		karel_pad.visible=true
+		Method Karel_list, "Refresh"
+		Method Karel_Pad,"Resize"
+	else
+		lock=true : lockPad=true
+		with karel_pad, "visible", false
+		karel_list.visible=false
+		karel_pad.visible=false
+         end if
+         if not NP.Height=Npheight then NP.Height=Npheight
+         Method Karel_Status, "move",twipsX*3,Npheight-tHeight,Np.Width-twipsX*6, tHeight
+	Method IDE_Karel,"RefreshAll"
+}
+Call Local IDE_Karel.Resize()
+status$="Welcome"
+Caption$="Programming Karel"
+after 300 {
+	// SO A LOCKED CAN'T GET FOCUS
+	With Karel_Status, "Locked", true
+rem {
+		method IDE_Karel, "move", 1000,1000, SCALE.X-2000, SCALE.Y-2000
+		call local IDE_Karel.Resize()
+}
+}
+Method IDE_Karel,"Show", 1
+Declare Karel_Pad Nothing
+Declare IDE_Karel Nothing 
+end
+Sub LoadWorld(&FileName$)
+	local new_name$
+	open.file filename$,,"Karel World","kworld"
+	read new_name$
+	if file.type$(new_name$)<>"kworld" then new_name$+="kworld"
+	if not exist(new_name$) then exit sub
+	try ok {
+		NewWorldFromJsonList(chr$(eval$(buffer(new_name$))))
+	}
+	if ok then
+		Filename$=new_name$
+		// prepare to draw here
+	end if
+End Sub
+Sub NewWorldFromJsonList(Json$)
+	Declare Local WorldDef JsonObject
+	
+	Method WorldDef, "parser", json$ as new json1
+	If Type$(json1)="JsonObject" then
+		With json1, "itempath" as Rec(), "itempath" as Rec$()
+		If Rec$("Magic Id")="11223344Karel" then
+			worldname$=Rec$("Τίτλος Κόσμου")
+			if greek then
+				KarelToDoTxt$=if$(Rec("Κόσμος.Σκοπός") -> "Ψάχνει ένα Μπίμπερ", "Μαζεύει όλα τα Μπίμπερ", "Βάζει Μπίμπερ σε θέσεις", "Πάει στην Περίμετρο", "Άλλο")
+			else
+				KarelToDoTxt$=if$(Rec("Κόσμος.Σκοπός") -> "Looking for a beeper", "Gathering all beebers", "Put beepers to positions", "Move to perimeter", "Look notes")
+			end if
+			////////////// todo
+			WallDefinition=Rec("Κόσμος")
+			
+			if type$(WallDefinition)="JsonObject" then
+				With WallDefinition, "json" as walljson$
+				World.PackJson$=walljson$
+				xC=World.XW
+				yC=World.YW
+			end if
+			for backupKarelRobot {
+				.How_many=Rec("Κάρελ.Σάκος")
+				 if .How_many=0 then .has=Nothing_Exist else .has=Something_Exist
+				.cellX=Rec("Κάρελ.ΘέσηΧ")
+				oldX=.cellY
+				.cellY=Yc-Rec("Κάρελ.ΘέσηΥ")+1
+				oldY=.cellY
+				.see=Rec("Κάρελ.Βλέπει")
+			}
+			kColor=Rec("Κάρελ.Χρώμα")
+			Robot=backupKarelRobot
+		end if
+	end if
+End Sub
+Init:
+def worldname$
+global Enum Orientation {North, East, South, West}
+global Enum Access {Out_Board=-1, EmptyCell, walls, lowwall, wall, LWall}
+global Enum Bag {Nothing_Exist=0, Something_Exist=-1}
+global const heditor$=" Shift F10 or Right Mouse Click Select from List"
+global const heditor2$=" Undo: Ctrl+Z | Redo: Ctrl+Y| Replace: Mark Text & F5"
+const KAREL_INSTRUCTIONS$="|MOVE|TURNLEFT|PICKBEEPER|PUTBEEPER|TURNOFF"
+const KAREL_COMMAND$ = "|BEGINNING-OF-PROGRAM|END-OF-PROGRAM|BEGINNING-OF-EXECUTION|END-OF-EXECUTION|BEGIN|END|DEFINE|IF|ELSE|ITERATE|WHILE"
+const LASTPART$="|TIMES|AS|DO|THEN"
+const FLAGS$ = "|FRONT-IS-CLEAR|FRONT-IS-BLOCKED|LEFT-IS-CLEAR|LEFT-IS-BLOCKED|RIGHT-IS-CLEAR|RIGHT-IS-BLOCKED|BACK-IS-CLEAR|BACK-IS-BLOCKED|NEXT-TO-A-BEEPER|NOT-NEXT-TO-A-BEEPER|ANY-BEEPERS-IN-BEEPER-BAG|NO-BEEPERS-IN-BEEPER-BAG|FACING-NORTH|NOT-FACING-NORTH|FACING-SOUTH|NOT-FACING-SOUTH|FACING-EAST|NOT-FACING-EAST|FACING-WEST|NOT-FACING-WEST"
+const that$ = {`'"[]*+.,=-"}+"{}!@#$%^&/\<>?~"
+const crlf$={
+}
+tab$=chr$(9)
+listtext$="Commands"+Replace$("|", crlf$+tab$,KAREL_COMMAND$+crlf$+"After Command"+LASTPART$+crlf$+"Instructions"+KAREL_INSTRUCTIONS$+crlf$+"Flags"+FLAGS$+crlf$+"IDE Operations|Load|Save|New|Run|Run Again"+crlf$+"Karel World|Load World"+crlf$+"Help|Editor Mouse|Editor Keys")
+Blocked=list:="Commands", "After Command", "Flags", "IDE Operations", "Instructions", "Karel World", "Help"
+Function KarelDrawing(col=1, wid as long=11, flip=0){
+	if wid<1 then wid=1
+	if flip then
+		maxX1=1
+		maxX=512
+		oldX=0
+	else
+		oldX=-twipsX*20
+		maxX1=-1
+		maxX=0
+	end if
+	cWidth=-twipsX*maxX1
+	Drawing  twipsX*512, twipsY*512 {
+		pen 0 {width 1 {
+				move oldX+twipsX*(maxX-263*maxX1),twipsY*(37+50+312)
+				polygon 0, 0, twipsY*70, cWidth*106, 0, 0, -twipsY*48, -cWidth*52, 0, 0, -twipsY*22 , -cWidth*54, 0
+		}}
+		pen 0 {width 1 {
+				move oldX+twipsX*(maxX-147*maxX1),twipsY*(263)
+				polygon 0, -cWidth*82, 0,  0, twipsY*96, cWidth*43, 0,0, -twipsY*53, cWidth*39, 0, 0, -twipsY*43
+		}}
+		pen 0 {width wid {
+			move oldX+twipsX*(maxX-147*maxX1),twipsY*(37)
+				path {
+				polygon 11, 0 , twipsY*312, cWidth*50, twipsY*50, cWidth*220, 0, 0, -twipsY*294,  -cWidth*68, -twipsY*68,  -cWidth*202, 0		
+				move oldX+twipsX*(maxX-208*maxX1),twipsY*(85)
+				polygon 5, cWidth*130, 0, 0, twipsY*180, -cWidth*130, 0, 0 , -twipsY*180
+				};
+			move oldX+twipsX*(maxX-147*maxX1),twipsY*37
+			path {
+				polygon col, 0 , twipsY*312, cWidth*50, twipsY*50, cWidth*220, 0, 0, -twipsY*294,  -cWidth*68, -twipsY*68,  -cWidth*202, 0
+				move oldX+twipsX*(maxX-208*maxX1),twipsY*(85)
+				polygon 5, cWidth*130, 0, 0, twipsY*180, -cWidth*130, 0, 0 , -twipsY*180
+			}
+			move oldX+twipsX*(maxX-268*maxX1),twipsY*334
+			draw cWidth*70
+		}}
+	} as alpha
+	=alpha
+}
+Class World {
+	events "Begin", "ChangeLine", "EmptyCell", "Beeper", "Wall"
+Private:
+	Dim k(), m()
+	maxX=0, maxY=0
+Public:
+	module PutBeeper (X as integer, Y as integer) {
+		if X<1 or X>.maxX or Y<1 or Y>.maxY then exit
+		.m(X,Y)++
+	}
+	module GetBeeper (X as integer, Y as integer) {
+		if X<1 or X>.maxX or Y<1 or Y>.maxY then exit
+		if .m(X,Y)>0 then .m(X,Y)--
+	}
+	module PutEmpty (X as integer, Y as integer){
+		if X<1 or X>.maxX or Y<1 or Y>.maxY then exit
+		.m(X,Y)=0
+	}
+	function HasBeeper(X as integer, Y as integer) {
+		if X<1 ή X>.maxX ή Y<1 ή Y>.maxY then exit
+		=.m(X, Y)>0
+	}
+	function Beepers(X as integer, Y as integer) {
+		if X<1 or X>.maxX or Y<1 or Y>.maxY then exit
+		=.m(X,Y)
+	}
+	function toNorth(&X as integer, &Y as integer, xxe=false) {
+		if Y=1 then
+		else.if X=1  ή X=.maxX  then
+			Y-- : 	=true
+		else.if .k(X,Y-1)=LWall or .k(X-1,Y-1)=EmptyCell or .k(X,Y-1)=EmptyCell then
+			Y-- : 	=true
+		else.if .k(X,Y-1)=wall then
+			Y-- : 	=true
+		end if
+		if xxe then =true
+	}
+	function toEast(&X as integer, &Y as integer, xxe=false) {
+		if X=.maxX then
+		else.if Y=1  ή Y=.maxY then
+			X++:=true
+		else.if (.k(X,Y)<>walls  and .k(X,Y)<>LWall) or  .k(X,Y-1)=EmptyCell then
+			X++:=true
+		end if
+		if xxe then =true
+	}
+	function toSouth(&X as integer, &Y as integer, xxe=false){
+		if Y=.maxY then
+		else.if X=1  ή X=.maxX  then
+			Y++ : =true
+		else.if .k(X,Y)=LWall or .k(X-1,Y)=EmptyCell or .k(X,Y)=EmptyCell then
+			Y++ : =true
+		else.if .k(X,Y)=wall then
+			Y++ : =true
+		end if
+		if xxe then =true
+	}
+	function toWest(&X as integer, &Y as integer, xxe=false){
+		if X=1 then
+		else.if Y=1  ή Y=.maxY then
+			X-- : = true
+		else.if (.k(X-1,Y)<>walls  and .k(X-1,Y)<>LWall) or  .k(X-1,Y-1)=EmptyCell then
+			X-- : = true
+		end if
+		if xxe then =true
+	}
+	function lookAhead(robot as *Robot, MoveOn as boolean=false,  NoControl=false) {
+		def integer tX, tY, Orient, ΟΚ
+		for robot {
+			tX=.cellX
+			tY=.cellY
+			Orient=.see
+		}
+		select case Orient
+		case North
+			ΟΚ=.toNorth(&tX, &tY, NoControl)
+		case East
+			ΟΚ=.toEast(&tX, &tY, NoControl)
+		case South
+			ΟΚ=.toSouth(&tX, &tY, NoControl)
+		case West
+			ΟΚ=.toWest(&tX, &tY, NoControl)
+		end select
+		if ΟΚ and MoveOn then
+			for robot {
+				.cellX<=tX
+				.cellY<=tY
+			}		
+		end if
+		=ΟΚ
+	}
+	function lookRight(robot as *Robot) {
+		def integer tX, tY, Orient
+		for robot {
+			tX=.cellX
+			tY=.cellY
+			Orient=.see
+		}
+		select case Orient
+		case West
+			=.toNorth(&tX, &tY)
+		case North
+			=.toEast(&tX, &tY)
+		case East
+			=.toSouth(&tX, &tY)
+		case South
+			=.toWest(&tX, &tY)
+		end select
+	}
+	function lookLeft(robot as *Robot) {
+		def integer tX, tY, Orient
+		for robot {
+			tX=.cellX
+			tY=.cellY
+			Orient=.see
+		}
+		select case Orient
+		case East
+			=.toNorth(&tX, &tY)
+		case South
+			=.toEast(&tX, &tY)
+		case West
+			=.toSouth(&tX, &tY)
+		case North
+			=.toWest(&tX, &tY)
+		end select		
+	}
+	function lookBack(robot as *ROBOT) {
+		def integer tX, tY, Orient
+		for robot {
+			tX=.cellX
+			tY=.cellY
+			Orient=.see
+		}
+		select case Orient
+		case South
+			=.toNorth(&tX, &tY)
+		case West
+			=.toEast(&tX, &tY)
+		case North
+			=.toSouth(&tX, &tY)
+		case East
+			=.toWest(&tX, &tY)
+		end select		
+	}
+	module Display {
+		if .maxX=0 ή .maxY=0 then exit
+		call event "Begin"
+		for i=1 to .maxY-1
+			for k=1 to .maxX
+			select case .k(k, i)
+				case >=walls
+					call event "Wall", .k(k, i)
+				case EmptyCell
+					call event "EmptyCell"
+				end select
+				if .m(k, i)>0 then call event "Beeper"
+			next
+			call event "ChangeLine"
+		next
+		for k=1 to .maxX
+			call event "EmptyCell"
+			if .m(k, i)>0 then call event "Beeper"
+		next
+		call event "ChangeLine"
+	}
+	property PackJson$ {
+		set {
+			link parent maxX, maxY, m(), k() to W, H, m1(), k1()
+			declare WorldDefinition JsonObject	
+			with WorldDefinition, "itempath" as rec(), "itempath" as rec$()
+			method WorldDefinition, "parser", Value$ as WorldDefinition
+			if type$(WorldDefinition)="JsonObject" then
+				TestW=rec("Πλάτος")
+				TestH=rec("Ύψος")
+				if TestW>=5 and TestW<=20 and TestH>=5 and TestH<=20 then
+				(W, H)=(TestW, TestH)
+				Dim m1(1 to W, 1 to H), k1(1 to W, 1 to H)=EmptyCell
+				for i=1 to W: for k=1 to H
+					m1(i,k)=rec("Μπιμπερ.["+str$(i)+","+str$(k)+"]")
+					select case rec$("Εμπόδια.["+str$(i)+","+str$(k)+"]")
+					case "1"
+						 k1(i, k)=walls
+					case "2"
+						k1(i, k)=lowwall
+					case "3"
+						k1(i, k)=wall
+					case "4"
+						k1(i, k)=LWall
+					end select
+				next : next
+				end if
+			end if
+		}
+	}
+	property XW {
+		Value {
+			link parent maxX to X
+			Value=X
+		}
+	}
+	property YW {
+		Value {
+			link parent maxY to Y
+			Value=Y
+		}
+	}
+Class:
+	module World (X as integer, Y as integer){
+		Dim .k(1 to X,1 to Y)=EmptyCell
+		Dim .m(1 to X,1 to Y)=0
+		.maxX<=X
+		.maxY<=Y
+	}
+}
+Class Robot {
+	events "drawme", "movenow", "drawcopy","drawbg"
+	See=East, Has=Nothing_Exist, How_many=0
+	cellX=0, cellY=0
+	module MoveAhead (&oldX, &oldY) {
+		call event "movenow", oldX, oldY, .cellX, .cellY, .see
+		(oldX, oldY) = (.cellX, .cellY)
+	}
+	module SweepMe {
+		call event "drawbg", .cellX, .cellY
+	}
+	module DrawFirst {
+		call event "drawme", .cellX, .cellY, .see, false
+	}
+	module DeawAgain {
+		call event "drawme", .cellX, .cellY, .see
+	}
+	module DrawNow (How=-1) {
+		call event "drawme", .cellX, .cellY, How
+	}
+	module DrawCopy (Orientation, Rangle, Rsize) {
+		call event "drawcopy", Orientation, Rangle, Rsize
+	}
+	module MoveRight  {
+		select case .see
+		case South
+			.see<=East
+		case West
+			.see<=South
+		case North
+			.see<=West
+		case East
+			.see<=North
+		end select
+		call event "drawme", .cellX, .cellY, .see
+	}
+}
+// posS is Y top for world drawing
+// posM1-posS is the height of world
+// wWidth is the width of world
+def single posM1, posS, wWidth
+def long xC, yC
+xC=20
+yC=10
+group withEvents World=World(xC, yC)
+def integer BgColor1=5, lineCol=7, WallCol=1, BeeperCol=4, ang=0
+inventory prevLine
+def integer horiz=0, cell=0, ka=100, ks=50
+Def backSpace$, KarelToDoTxt$
+def single stLineX, startLine, lineK, rx, ry
+BgColor1=5
+lineCol=4
+WallCol=14
+BeeperCol=4
+
+def Karel, karelWest
+def Outline, kSize, kColor
+group withEvents Robot=Robot()
+KarelRobot->Robot
+backupKarelRobot=Robot()
+def oldX, oldY
+// setup Robot variables
+for KarelRobot {
+	.see=east
+	.cellX=1 : oldX=1
+	.cellY=1 : oldY=1
+}
+NewWorldFromJsonList(list1$)
+karel=KarelDrawing(kColor, 38)
+
+// world event functions
+function World_Begin {
+	stLineX=pos.X : startLine=pos.Y : lineK=1
+	rx=pos.X+ka:ry=pos.Y
+}
+function World_ChangeLine {
+	move stLineX,  startLine+ka*lineK
+	cell=0 :  horiz=false : 	lineK++	
+}
+// private module for events EmptyCell and Wall
+module lines {
+	if lineK=1 then
+		move X, Y : draw 0, ks, lineCol
+	else.if lineK=yC then
+		move X, Y :	draw 0, -ks-twipsY, lineCol
+	else
+		move X, Y -ks : draw 0, ka, lineCol
+	end if
+	if cell=1 then
+		move X, Y : draw ks, 0, lineCol
+	else.if cell=xC then
+		move X, Y : draw -ks-twipsX, 0, lineCol
+	else
+		move X-ks, Y : draw ka, 0, lineCol
+	end if
+}
+function World_EmptyCell {
+	step ka : cell++
+	local X=pos.x, Y=pos.y
+	call local lines
+	move X, Y : horiz=false
+	if exist(prevLine, cell) then delete prevLine, cell:move X, Y
+}
+function World_Beeper {
+	// using Xor
+	Χρώμα ! BeeperCol {circle fill BeeperCol, ka/8, 1, BeeperCol}
+}
+function World_Wall {
+	read new Τι
+	step ka:cell++:local X=pos.x, Y=pos.y
+	call local lines
+	move X, Y
+	if horiz and Τι<wall then
+		if cell<xC then move X-ka*.5, Y+ka*.5 : width 4 {draw ka, 0, WallCol} :move X, Y
+	else
+		horiz=true
+	end if
+	if Τι=wall then
+		if not exist(prevLine, cell) then append prevLine, cell
+	else.if exist(prevLine, cell) then
+		if Τι<>lowwall then
+			if lineK<yC then
+				move X+ka*.5, Y-ka*.5 : width 4 {draw  0, ka, WallCol} : move X, Y
+			else
+				delete prevLine, cell				
+			end if
+		end if
+	else
+		append prevLine, cell
+	end if
+}
+
+// robot's event functions
+function Robot_drawme(new X, Y, way, old=true) {
+	oldX=X
+	oldY=Y
+	move  rx+ka*(X-1), ry+ka*(Y-1)
+	if old then sprite sprite$
+	call local Robot_drawcopy(way, 0, kSize)
+}
+function Robot_drawcopy(new how, ang, kSize) {
+	Select case how
+	case north
+		sprite Karel,5, 90+ang, kSize
+	case east
+		sprite Karel, 5,ang, kSize
+	case west
+		sprite karelWest, 5, ang, kSize
+	case south
+		sprite karelWest, 5, 90+ang, kSize
+	end select
+	refresh 20
+}
+function Robot_drawbg(new X, Y) {
+	move  rx+ka*(X-1), ry+ka*(Y-1)
+	sprite sprite$
+	push sprite$ : drop
+}
+function Robot_movenow(new X,Y, x1, y1, way) {
+	local m=max.data(abs(x1-X), abs(y1-Y))*ceil(kSize div 4+1)*3
+	if m=0 then
+		call local Robot_drawme(x1, y1, way)
+	else
+		local yy=(y1-Y)/m, xx=(x1-X)/m
+		refresh 5000
+		while m>0		
+			Y+=yy : X+=xx
+			sprite sprite$
+			move rx+ka*(X-1), ry+ka*(Y-1)
+			call local Robot_drawcopy(way, ΑΝ(3-m υπολ 3->7, 0,-7),  kSize) 
+			m--
+			if m>1 then refresh  5000: wait 10
+		end while
+		refresh 20
+	end if
+}
+// use by events using Call Local PrepareWorld()
+Function PrepareWorld {
+	local ka1, ka2
+	ka1=(wWidth/xC div (twipsX*2))*twipsX*2
+	ka2=((posM1-posS)/yC div (twipsX*2))*twipsX*2	
+	ka=min.data(ka1, ka2)
+	ks=ka/2
+	kSize=ceil(ka/image.y(Karel)*100)
+	Outline=ceil(14000/ka)
+	Karel=KarelDrawing(kColor, Outline)
+	karelWest=KarelDrawing(kColor, Outline, 1)
+	kSize=ceil(ka/image.y(Karel)*100)
+}
+return
+}
